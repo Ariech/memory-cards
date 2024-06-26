@@ -1,0 +1,42 @@
+* {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5em;
+  border-bottom: 2px solid #ccc;
+  gap: 1em;
+  background-color: #9b59b6;
+
+  height: 100vh;
+  max-height: 100vh;
+  transition: max-height 1s ease;
+}
+
+.header.shrink {
+  max-height: 10em;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.scores_container {
+  display: flex;
+  gap: 1em;
+}
+
+.score {
+  font-size: 1.5em;
+}
+
+.highscore {
+  color: #7bed9f;
+}
