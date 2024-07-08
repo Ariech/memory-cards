@@ -1,19 +1,19 @@
-import styles from "../styles/Header.module.css";
-import { useState, useEffect } from "react";
+import styles from '../styles/Header.module.css'
+import { useState, useEffect } from 'react'
 
 function Header({ title, score, highscore }) {
-  const [shrinkHeader, setShrinkHeader] = useState(false);
+  const [shrinkHeader, setShrinkHeader] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShrinkHeader(true);
-    }, 1000);
+      setShrinkHeader(true)
+    }, 1000)
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
-    <header className={`${styles.header} ${shrinkHeader ? styles.shrink : ""}`}>
+    <header className={`${styles.header} ${shrinkHeader ? styles.shrink : ''}`}>
       <div className={styles.title_container}>
         <h1 className={styles.title}>{title}</h1>
       </div>
@@ -25,7 +25,7 @@ function Header({ title, score, highscore }) {
         </p>
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header
