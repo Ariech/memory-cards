@@ -4,4 +4,9 @@
   grid-template-rows: repeat(2, 1fr);
   margin: 1em;
   gap: 2em;
+
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 2em;
+  z-index: -2;
 }
