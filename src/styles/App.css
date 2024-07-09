@@ -15,11 +15,22 @@ html {
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  height: 100vh;
+  background-color: #eaeaea;
 }
 
-/* Temp */
-.card-container {
+#root {
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex: 1;
 }

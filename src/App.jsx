@@ -11,8 +11,12 @@ function App() {
 
   return (
     <>
-      <Header title={'Memory Cards'} score={score} highscore={highscore} />
-      <Main url={url} />
+      <header>
+        <Header title={'Memory Cards'} score={score} highscore={highscore} />
+      </header>
+      <main>
+        <Main url={url} />
+      </main>
     </>
   )
 }

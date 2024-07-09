@@ -1,0 +1,30 @@
+.card {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.5em;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  margin: -2px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(#e66465, #9198e5);
+  border-radius: inherit;
+}
+.card_gradient_text {
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  background: linear-gradient(#ff4d4d, #4d4dff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}

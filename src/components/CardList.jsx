@@ -1,14 +1,19 @@
 import Card from './Card'
+import styles from '../styles/CardList.module.css'
 
 function CardList({ itemsList }) {
   return (
-    <div className="card-container">
-      {itemsList.map((item, index) => (
-        <>
-          <Card key={index} data={item} />
-        </>
-      ))}
-    </div>
+    <>
+      {itemsList.length === 0 ? (
+        <p>Loading...</p>
+      ) : (
+        <div className={styles.card_container}>
+          {itemsList.map((item, index) => (
+            <Card key={index} data={item} />
+          ))}
+        </div>
+      )}
+    </>
   )
 }
 
