@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import CardList from './CardList'
+import { generateRandomNumber } from '../utilities/utils'
 
 function Main({ url }) {
   const [cardList, setCardList] = useState([])
@@ -8,7 +9,11 @@ function Main({ url }) {
     try {
       const promises = []
       for (let i = 1; i <= 10; i++) {
-        promises.push(fetch(url + i).then((response) => response.json()))
+        promises.push(
+          fetch(url + generateRandomNumber(1, 1000)).then((response) =>
+            response.json()
+          )
+        )
       }
       const data = await Promise.all(promises)
       setCardList(data)
