@@ -1,8 +1,8 @@
 import styles from '../styles/Card.module.css'
 
-function Card({ data }) {
+function Card({ data, handleClick }) {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={() => handleClick(data.id)}>
       <p className={styles.card_gradient_text}>{data.name.toUpperCase()}</p>
       <img
         className={styles.card_image}

@@ -15,7 +15,7 @@ function App() {
         <Header title={'Memory Cards'} score={score} highscore={highscore} />
       </header>
       <main>
-        <Main url={url} />
+        <Main url={url} setScore={setScore} />
       </main>
     </>
   )
