@@ -9,13 +9,19 @@ function App() {
 
   const url = 'https://pokeapi.co/api/v2/pokemon/'
 
+  const checkHighscore = (newScore) => {
+    if (newScore > highscore) {
+      setHighscore(newScore)
+    }
+  }
+
   return (
     <>
       <header>
         <Header title={'Memory Cards'} score={score} highscore={highscore} />
       </header>
       <main>
-        <Main url={url} setScore={setScore} />
+        <Main url={url} setScore={setScore} checkHighscore={checkHighscore} />
       </main>
     </>
   )

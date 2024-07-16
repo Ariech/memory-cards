@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import CardList from './CardList'
 import { generateRandomNumber, shuffleArray } from '../utilities/utils'
 
-function Main({ url, setScore }) {
+function Main({ url, setScore, checkHighscore }) {
   const [cardList, setCardList] = useState([])
   const [clickedCardIds, setClickedCardIds] = useState([])
 
@@ -13,7 +13,11 @@ function Main({ url, setScore }) {
       fetchData(url)
     } else {
       setClickedCardIds([...clickedCardIds, id])
-      setScore((prevScore) => prevScore + 1)
+      setScore((prevScore) => {
+        const newScore = prevScore + 1
+        checkHighscore(newScore)
+        return newScore
+      })
       setCardList([...shuffleArray(cardList)])
     }
   }
